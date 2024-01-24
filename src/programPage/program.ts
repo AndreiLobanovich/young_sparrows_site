@@ -15,10 +15,10 @@ export const program: programData = {
             imageUrls: ['./subjectImages/Choir.png']
         },
         {
-            name: 'Robotics student club', // -
+            name: 'Robotics student club',
             description: 'A playground for future innovators, our club helps your child build a love for ' +
                 'problem-solving and engineering.',
-            imageUrls: ['./subjectImages/robo.png']
+            imageUrls: ['./subjectImages/Robotics.png']
         },
         {
             name: 'Pottery work student club',
