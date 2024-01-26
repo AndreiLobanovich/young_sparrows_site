@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                     <Box sx={{display: 'flex', alignItems: 'center', color: 'info.main'}}>
                         <EmailIcon/>
                         <Typography variant='h5' color='white' fontWeight={700} ml={2}>
-                            office@kindergarten-littlesparrows.com
+                            office@youngsparrowsprimary.rs
                         </Typography>
                     </Box>
                     <Box sx={{display: 'flex', alignItems: 'center', color: 'info.main'}}>
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
                         </Typography>
                     </Box>
                     <Box sx={{display: 'flex', alignItems: 'center', mb: 5}}>
-                        <SocialMediaIcon href={'https://www.instagram.com/littlesparrows.kindergarten/'}>
+                        <SocialMediaIcon href={'https://www.instagram.com/young.sparrows/'}>
                             <InstagramIcon color={'info'} fontSize={'large'}/>
                         </SocialMediaIcon>
                         <SocialMediaIcon href={'https://t.me/+381616140475'}>
