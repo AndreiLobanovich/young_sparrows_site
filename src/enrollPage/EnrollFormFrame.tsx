@@ -45,7 +45,11 @@ const EnrollFormFrame: React.FC = () => {
             })
     };
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
+    const lines = [
+        '✅ A world-leading primary school academic program',
+        '✅ A multicultural, language-immersive environment',
+        '✅ A comprehensive curriculum for holistic development'
+    ]
     return (
         <Box
             padding={isMobile ? '10px' : '73px'}
@@ -58,23 +62,16 @@ const EnrollFormFrame: React.FC = () => {
 
             }}>
             <Grid xs={12} spacing={5} container flexDirection='row' display='flex' my='5vh'>
-                <Grid item xs={4} >
-                    <Typography variant={'h3'} fontWeight={400}>
-                        ✅ A world-leading primary school academic program
-                    </Typography>
-                </Grid>
-                <Grid item xs={4} >
-                    <Typography variant={'h3'} fontWeight={400}>
-                        ✅ A multicultural, language-immersive environment
-                    </Typography>
-                </Grid>
-                <Grid item xs={4} >
-                    <Typography variant={'h3'} fontWeight={400}>
-                        ✅ A comprehensive curriculum for holistic development
-                    </Typography>
-                </Grid>
+                {lines.map((line, index) => (
+                        <Grid item xs={12} sm={4} key={index}>
+                            <Typography variant={'h3'}>
+                                {line}
+                            </Typography>
+                        </Grid>
+                    )
+                )}
             </Grid>
-            <Typography variant={'h3'} sx={{color: theme.palette.text.disabled}} gutterBottom>
+            <Typography variant={'h3'} sx={{color: theme.palette.text.disabled}} textAlign='center' gutterBottom>
                 Fill out and submit the form below. We’ll get back to you within two business days.
             </Typography>
             <Box
@@ -83,7 +80,7 @@ const EnrollFormFrame: React.FC = () => {
                 sx={{
                     p: 4,
                     border: `5px solid ${theme.palette.secondary.main}`,
-                    width: '80%',
+                    width: {sm: '80%', xs: '100%'},
                     '& .MuiTextField-root': {
                         margin: '8px 0',
                         '&.Mui-focused': {

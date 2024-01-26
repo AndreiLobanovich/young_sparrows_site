@@ -12,27 +12,25 @@ const ForwardThinkingFrame: React.FC = () => {
             px: isMobile ? '20px' : '73px',
             flexDirection: 'column',
         }}>
-            <Typography variant={'h2'} mx='auto'>
+            <Typography variant={'h2'} mx='auto' gutterBottom>
                 Forward-thinking educational approach
             </Typography>
-            <Grid container spacing={12}>
-                <Grid item xs={8} style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
-                    <Typography variant={'h3'} width={'80%'} fontWeight={400}>
+            <Grid container spacing={{md: 12, xs: 5}}>
+                <Grid item md={8} xs={12} style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+                    <Typography variant={'h3'} fontWeight={400}>
                         With the esteemed Cambridge Primary certification, Young Sparrows nurtures holistic development
                         for students aged 5-11.<br/><br/>
-
                         Our integrated approach fosters intellectual, emotional, social, and physical growth,
                         empowering children to navigate and find their niche in the dynamic world.<br/><br/>
-
                         We ignite a passion for learning, delving deep into each subject’s core concepts, ensuring
                         thorough understanding and enthusiasm.
                     </Typography>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item md={4} xs={12}>
                     <ResizableImage src={'/approachPage/forwardThinking.png'}/>
                 </Grid>
             </Grid>
-            <Typography variant='h2' mx='auto'>
+            <Typography variant='h2' mx='auto' mt='5vh'>
                 Committed to your child’s growth
             </Typography>
             <Typography variant='h3' fontWeight={400}>

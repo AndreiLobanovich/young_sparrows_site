@@ -41,13 +41,13 @@ const DifferenceFrame: React.FC = () => {
             flexDirection: 'column',
             px: isMobile ? '20px' : '73px'
         }}>
-            <Typography variant={'h2'} mx='auto'>
+            <Typography variant={'h2'} mx='auto' gutterBottom>
                 The Young Sparrows difference
             </Typography>
             <Grid container xs={12} spacing={4}>
                 {renderCards(cards)}
             </Grid>
-            <Box mx='auto' my='15vh'>
+            <Box mx='auto' my='5vh'>
                 <OrangeHighlightButton onClick={handleClick}>
                     <Typography variant='h3'>
                         PRICING

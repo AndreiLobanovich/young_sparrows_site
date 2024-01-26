@@ -18,11 +18,11 @@ const TransitioningFrame: React.FC = () => {
             <Typography variant={'h2'} mx='auto' marginBottom='2vh'>
                 Transitioning to and from Young Sparrows
             </Typography>
-            <Grid container spacing={12} sx={{display: 'flex', flexDirection: 'row'}}>
-                <Grid item xs={5}>
+            <Grid container spacing={{xs: 5, md: 12}} sx={{display: 'flex', flexDirection: 'row'}}>
+                <Grid item xs={12} md={5}>
                     <ResizableImage src={'/homePage/transition.png'}/>
                 </Grid>
-                <Grid item sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly'}} xs={7}>
+                <Grid item sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly'}} xs={12} md={7}>
                     <Typography variant={'h3'} fontWeight={400}>
                         Easing the move from kindergarten, our first-year curriculum at primary school blends
                         play-based learning within a structured setting.<br/><br/>

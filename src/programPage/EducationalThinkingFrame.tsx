@@ -11,6 +11,7 @@ const EducationalThinkingFrame: React.FC = () => {
             display: 'flex',
             flexDirection: 'column',
             px: isMobile ? '20px' : '73px',
+            py: '5vh'
         }}>
             <Typography variant={'h2'} mx='auto' fontWeight={400}>
                 Cambridge Primary:

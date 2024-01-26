@@ -152,6 +152,12 @@ export const program: programData = {
             imageUrls: ['./subjectImages/Art.png']
         },
         {
+            name: 'Physical education',
+            description: 'Lessons that lay the groundwork for healthy habits and active lifestyles, while also ' +
+                'increasing strength, coordination, and team spirit in each child.',
+            imageUrls: ['./subjectImages/pe.png']
+        },
+        {
             name: 'German language (optional)',
             description: 'Enhance your child’s linguistic arsenal with German language lessons, opening doors to a ' +
                 'rich cultural heritage.',

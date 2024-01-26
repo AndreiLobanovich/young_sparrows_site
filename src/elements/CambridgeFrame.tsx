@@ -14,8 +14,8 @@ const CambridgeFrame: React.FC = () => {
                 height: '10 0%',
             }}
         >
-            <Grid container spacing={12} style={{height: '100%'}} p='0'>
-                <Grid item xs={8} style={{display: 'flex', flexDirection: 'column'}}>
+            <Grid container spacing={5} style={{height: '100%'}} p='0'>
+                <Grid item xs={12} md={9} style={{display: 'flex', flexDirection: 'column'}}>
                     <Typography variant={'h3'} sx={{fontWeight: 400}}>
                         Our international primary school is proud to have earned the esteemed Cambridge Primary
                         certification.
@@ -25,8 +25,7 @@ const CambridgeFrame: React.FC = () => {
                         the Ministry of Education of the Republic of Serbia.
                     </Typography>
                 </Grid>
-                <Grid xs={1}/>
-                <Grid item xs={3} style={{display: 'flex', flexDirection: 'column'}}>
+                <Grid item xs={6} md={3} style={{display: 'flex', flexDirection: 'column'}}>
                     <ResizableImage src={'/cambridge.png'}/>
                     <ResizableImage src={'/minProsvete.png'}/>
                 </Grid>

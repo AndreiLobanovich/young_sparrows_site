@@ -17,8 +17,7 @@ const ReserveNPricingLinkFrame: React.FC = () => {
             sx={{
                 backgroundColor: theme.palette.primary.main,
                 display: 'flex',
-                paddingLeft: isMobile ? '20px' : '73px',
-                paddingRight: isMobile ? '20px' : '73px',
+                px: isMobile ? '20px' : '73px',
                 flexDirection: 'column',
             }}
             my='5vh'
@@ -26,22 +25,20 @@ const ReserveNPricingLinkFrame: React.FC = () => {
             <Typography variant='h2' mx='auto' my='5vh'>
                 A pathway to future success
             </Typography>
-            <Grid container spacing={1}>
-                <Grid item xs={8} style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
-                    <Typography variant={'h3'} width={'80%'} fontWeight={400}>
+            <Grid container spacing={isMobile ? 5 : 20}>
+                <Grid item xs={12} md={7} style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+                    <Typography variant={'h3'} fontWeight={400}>
                         “At Young Sparrows, we collaborate with families to nurture each child's growth. Our goal is to
                         guide them into becoming confident, responsible, reflective, innovative, and engaged young
-                        individuals."<br/><br/>
-
+                        individuals.<br/><br/>
                         Our Cambridge International School programs lay exceptional foundations for future education.
                         They are tailored to discover your child’s unique talents, teaching resilience through
                         challenges and framing setbacks as vital steps towards growth and success.”<br/><br/>
-
                         Anna Poletaeva,<br/>
                         Director of Young Sparrows international primary school
                     </Typography>
                 </Grid>
-                <Grid item xs={4} order={isMobile ? -1 : 1}>
+                <Grid item xs={6} md={5} order={isMobile ? -1 : 1}>
                     <ResizableImage src={'/homePage/director.jpeg'}/>
                 </Grid>
             </Grid>

@@ -19,7 +19,7 @@ const PricingFrame: React.FC = () => {
         }, 300)
         return () => clearTimeout(timer);
     }
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     return (
         <Box sx={{
             backgroundColor: theme.palette.primary.main,
@@ -80,23 +80,25 @@ const PricingFrame: React.FC = () => {
                     '*equivalent to Cambridge Early Years 3 and Cambridge Primary Stage 1' :
                     '*equivalent to Cambridge Primary Stage 2'}
             </Typography>
-            <Grid
-                container
-                spacing={2}
-                justifyContent='center'
-                mx='auto'
-                width='80%'
-                sx={{opacity: animate ? 0 : 1, transition: 'opacity 0.3s ease-in-out'}}
-            >
-                {Object.values(pricing[year]).map((price, index) => (
-                    <Grid item xs={4} md={6} key={index} alignItems='center' justifyContent='center'>
-                        <Typography variant="h3">{price.title}</Typography>
-                        {price.text.map((line, lineIndex) => (
-                            <Typography variant='h5' fontWeight={400}>{line}</Typography>
-                        ))}
-                    </Grid>
-                ))}
-            </Grid>
+            <Box display='flex' justifyContent='center'>
+                <Grid
+                    container
+                    spacing={2}
+                    justifyContent='center'
+                    sm={8}
+                    xs={12}
+                    sx={{opacity: animate ? 0 : 1, transition: 'opacity 0.3s ease-in-out'}}
+                >
+                    {Object.values(pricing[year]).map((price, index) => (
+                        <Grid item xs={12} md={6} key={index} alignItems='center' justifyContent='center'>
+                            <Typography variant="h3">{price.title}</Typography>
+                            {price.text.map((line, lineIndex) => (
+                                <Typography variant='h5' fontWeight={400}>{line}</Typography>
+                            ))}
+                        </Grid>
+                    ))}
+                </Grid>
+            </Box>
             <Box mx='auto' display='flex' flexDirection='row' mt='5vh'>
                 <Typography variant='h3' fontWeight={400}>
                     Yearly tuition value:
@@ -111,19 +113,21 @@ const PricingFrame: React.FC = () => {
                 👉 A 5% discount for siblings<br/>
                 👉 Tuition can be paid by a legal entity
             </Typography>
-            <Typography variant='h3' mx='auto'>
+            <Typography variant='h3' mx='auto' gutterBottom>
                 Optional fees (per month):
             </Typography>
-            <Grid container spacing={12} justifyContent='center' mx='auto' width='80%'>
-                {Object.values(pricing[year === 'year1' ? 'optional1' : 'optional2']).map((price, index) => (
-                    <Grid item xs={2} md={4} key={index} alignItems='center' justifyContent='center'>
-                        <Typography variant="h5">{price.title}</Typography>
-                        {price.text.map((line, lineIndex) => (
-                            <Typography variant='h5' fontWeight={400}>{line}</Typography>
-                        ))}
-                    </Grid>
-                ))}
-            </Grid>
+            <Box display='flex' justifyContent='center' width='100%'>
+                <Grid container spacing={{md: 12, xs: 2}} justifyContent='center' sm={8} xs={12}>
+                    {Object.values(pricing[year === 'year1' ? 'optional1' : 'optional2']).map((price, index) => (
+                        <Grid item xs={12} md={4} key={index} alignItems='center' justifyContent='center'>
+                            <Typography variant="h5">{price.title}</Typography>
+                            {price.text.map((line, lineIndex) => (
+                                <Typography variant='h5' fontWeight={400}>{line}</Typography>
+                            ))}
+                        </Grid>
+                    ))}
+                </Grid>
+            </Box>
         </Box>
 
     )

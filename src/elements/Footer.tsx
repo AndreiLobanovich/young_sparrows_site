@@ -10,7 +10,7 @@ import {Telegram, WhatsApp} from "@mui/icons-material";
 import ResizableImage from "./ResizableImage";
 
 const Footer: React.FC = () => {
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const isMobile = useMediaQuery('(max-width:900px)');
     return (
         <Box
             sx={{
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
                     <Box sx={{display: 'flex', alignItems: 'center', color: 'info.main'}}>
                         <LocationOnIcon/>
                         <Typography variant='h5' color='white' fontWeight={700} ml={2}>
-                            Kornelija Stankovića 19, Beograd 11000, Serbia
+                            Radoslava Grujića 7, Beograd 11000, Serbia
                         </Typography>
                     </Box>
                     <Box sx={{display: 'flex', alignItems: 'center', mb: 5}}>
@@ -67,10 +67,10 @@ const Footer: React.FC = () => {
                         </SocialMediaIcon>
                     </Box>
                 </Grid>
-                <Grid item xs={12} md={6} order={isMobile ? -1 : 1}>
+                <Grid item xs={12} md={6} order={{md: 1, xs: -1}}>
                     <iframe
                         title='map'
-                        src="https://www.google.com/maps/embed/v1/place?q=19,+Kornelija+Stankovica+Street,+Belgrade,+Serbia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&language=en"
+                        src="https://www.google.com/maps/embed/v1/place?q=7,+Radoslava+Grujica+Street,+Belgrade,+Serbia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&language=en"
                         width="100%"
                         height="100%"
                         style={{border: 0}}

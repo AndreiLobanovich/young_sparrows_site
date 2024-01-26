@@ -10,7 +10,7 @@ declare module '@mui/material/Typography' {
 
 const customBreakpoints: BreakpointsOptions = {
     values: {
-        xs: 600,
+        xs: 0,
         sm: 900,
         md: 1024,
         lg: 1280,

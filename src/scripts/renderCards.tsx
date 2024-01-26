@@ -10,7 +10,7 @@ export interface Card {
 
 export const renderCards = (cards: Card[]) => {
     return cards.map(card => (
-        <Grid item key={card.imagePath} xs={4}>
+        <Grid item key={card.imagePath} xs={12} sm={6} md={4}>
             <TextToppedImage imagePath={card.imagePath}>
                 {card.text}
             </TextToppedImage>

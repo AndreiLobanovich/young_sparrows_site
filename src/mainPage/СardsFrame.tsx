@@ -40,7 +40,7 @@ const CardsFrame: React.FC = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <Box
-            mb='18vh'
+            my='5vh'
             sx={{
                 backgroundColor: theme.palette.primary.main,
                 display: 'flex',
@@ -50,11 +50,7 @@ const CardsFrame: React.FC = () => {
         >
             <Box sx={{height: '10vh'}}/>
             <Grid container xs={12} spacing={4}>
-                {renderCards(cards.slice(0, 3))}
-            </Grid>
-            <Box sx={{height: '5vh'}}/>
-            <Grid container xs={12} spacing={4}>
-                {renderCards(cards.slice(3, 6))}
+                {renderCards(cards)}
             </Grid>
         </Box>
     );
